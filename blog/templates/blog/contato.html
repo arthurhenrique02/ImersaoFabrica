@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contato de {{contato.nome}}</title>
+</head>
+<body>
+    <h1>{{contato.nome}}</h1>
+    <br>
+    <p> Número de telefone: {{contato.numero}}</p>
+    <p> Rua: {{contato.rua}}</p>
+    <p> Bairro: {{ contato.bairro }}</p>
+    <p> Nº da residência: {{contato.casa}}</p>
+    <p> Ponto de referência: {{contato.ponto_ref}}</p>
+
+    <form action="{% url 'update' contato.id %}"><input type="submit" value="Atualizar" /></form><br>
+    <form action="{% url 'home' %}"><input type="submit" value="Voltar" /></form>
+</body>
+</html>

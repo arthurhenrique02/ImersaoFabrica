@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+</head>
+<body>
+    <h1>Lista de contatos</h1>
+    <h4>Clique no nome que deseja para ver mais dados</h4>
+    <br>
+    <ul>
+        {% for contato in contats %}
+        <li><a href="{% url 'ver_contato' contato.id %}">{{ contato.nome }}</a> -- {{ contato.numero }}</li>
+        {% endfor %}
+    </ul>
+    <br><br>
+    <form action="{% url 'novo_contato' %}""><input type="submit" value="Novo contato" /></form>
+</body>
+</html>
